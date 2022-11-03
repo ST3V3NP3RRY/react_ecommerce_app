@@ -7,6 +7,7 @@ function App() {
   const Container = styled.div`
     background-color: #eee;
     height: 100vh;
+    margin: 0;
   `;
 
   return (

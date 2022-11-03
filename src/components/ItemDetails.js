@@ -6,6 +6,7 @@ const ItemDetails = ({ item, clickHandler }) => {
     background-color: white;
     padding: 2rem;
     width: 12rem;
+    list-style-type: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   `;
 
@@ -18,9 +19,12 @@ const ItemDetails = ({ item, clickHandler }) => {
 
   return (
     <ShopItem>
-      <h2>{item.title}</h2>
-      <h2>{item.artist}</h2>
-      <h2>£{item.price}</h2>
+      <div>
+        <img src={item.img} alt="" width="200" height="200" />
+        <h3>{item.title}</h3>
+        <h3>{item.artist}</h3>
+        <h2>£{item.price}</h2>
+      </div>
       <Button onClick={() => clickHandler(item)}>Add to basket</Button>
     </ShopItem>
   );
